@@ -8,16 +8,16 @@ module.exports = (grunt) ->
     copy:
       main:
         expand: true
-        cwd: ''
-        src: ['./css/*', './fonts/*', './js/*']
-        dest: '../'
+        cwd: 'src'
+        src: ['*/*']
+        dest: 'build'
 
     watch:
       haml:
-        files: ["./index.haml"]
+        files: ["src/index.haml"]
         tasks: ["compile:haml"]
       static:
-        files: ['./res/*', './css/*', './img/*']
+        files: ['src/*/*']
         tasks: ["compile:copy"]
 
     connect:
