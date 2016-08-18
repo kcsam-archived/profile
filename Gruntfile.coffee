@@ -2,8 +2,12 @@ module.exports = (grunt) ->
   grunt.initConfig
     haml:
       dist:
-        files:
-          'build/index.html': 'src/index.haml'
+        expand: true
+        flatten: false
+        cwd: 'src'
+        src: ['**/*.haml']
+        dest: 'build'
+        ext: '.html'
 
     copy:
       main:
@@ -14,7 +18,7 @@ module.exports = (grunt) ->
 
     watch:
       haml:
-        files: ["src/index.haml"]
+        files: ["src/**/index.haml"]
         tasks: ["compile:haml"]
       static:
         files: ['src/*/*']
