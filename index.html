@@ -16,6 +16,13 @@
 
       ga('create', 'UA-84734859-1', 'auto');
       ga('send', 'pageview');
+
+      var trackOutboundLink = function(url) {
+        ga('send', 'event', 'outbound', 'click', url, {
+          'transport': 'beacon',
+          'hitCallback': function(){document.location = url;}
+        });
+      }
     </script>
   </head>
   <body class='is-loading'>
@@ -31,7 +38,7 @@
         <footer>
           <ul class='icons'>
             <li>
-              <a class='fa-github' href='https://github.com/samkahchiin' onclick="ga('send', 'event', 'external link', 'click', 'github', 1">github</a>
+              <a class='fa-github' href='https://github.com/samkahchiin' onclick="trackOutboundLink('https://github.com/samkahchiin')">github</a>
             </li>
             <li>
               <a class='fa-linkedin' href='https://www.linkedin.com/in/kah-chiin-sam-618b2685'>Linkedin</a>
