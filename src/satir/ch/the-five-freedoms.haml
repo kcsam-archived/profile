@@ -1,0 +1,46 @@
+!!!
+%html
+  %head
+    %title Satir - The five freedom
+    %meta{charset:"utf-8"}/
+    %meta{content:"width=device-width, initial-scale=1", name:"viewport"}
+    %link{href:"assets/css/main.css",rel:"stylesheet"}
+    %noscript
+      %link{href:"assets/css/noscript.css",rel:"stylesheet"}
+  %body.is-loading
+    #wrapper
+      %section#main
+        %header
+          %span.avatar
+            %img{src:"/images/satir.jpeg"}
+          %h1 五种自由
+          %p 萨提尔
+        %footer
+          自由地看和听当下的一切，
+          %br
+          而不是局限于应该看到和听到什么；
+          %br
+          自由地说出自己的感受和想法，
+          %br
+          而不是局限于应该表达什么感受和想法；
+          %br
+          自由地感受，而不是应该感受什么，
+          %br
+          自由地提出自由的需要，而不总是等待他人的许可；
+          %br
+          自由地去冒险尝新，
+          %br
+          而不是但求安稳，故步自封。
+      / Footer
+      %footer#footer
+        %ul.copyright
+          %li
+            Design:
+            %a{href:"http://html5up.net"} HTML5 UP
+    / Scripts
+
+:javascript
+  if ('addEventListener' in window) {
+    window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+    document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+  }

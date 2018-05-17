@@ -5,7 +5,7 @@ module.exports = (grunt) ->
         expand: true
         flatten: false
         cwd: 'src'
-        src: ['**/*.haml']
+        src: ['**/**/*.haml']
         dest: 'build'
         ext: '.html'
 
